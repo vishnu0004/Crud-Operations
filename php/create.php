@@ -12,6 +12,7 @@ if(isset($_POST['submit'])){
     if($result){
         if(move_uploaded_file($tmp_name,$full_path)){
             echo "uploaded file";
+            header("location:view.php");
         }
         else{
             echo "not upload file";
